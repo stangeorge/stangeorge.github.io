@@ -1,6 +1,6 @@
-### Learning Go Language by building over a simple example
+## Learning Go Language by building over a simple example
 
-#### Find Environment Variables
+### Find Environment Variables
 **Concepts:** package, imports, main function, printing a line, running a go program.
 
     package main
@@ -19,7 +19,7 @@
 
 **Result:** I got all the variables in a single block. Let me try to separate this out.
 
-#### Get the variables separately using range
+### Get the variables separately using range
 **Concepts:** for-loop, range
 
     for e := range os.Environ() {
@@ -34,7 +34,7 @@
 
 **Result:** I got only the index values. Let me get the variables.
 
-#### Get both index and values variables separately
+### Get both index and values variables separately
 **Concepts:** indexes and values in a for-loop
 
     for i, e := range os.Environ() {
@@ -47,7 +47,7 @@
 
 **Result:** I got the index and variables. Let me ignore the index.
 
-#### Ignore index using underscore
+### Ignore index using underscore
 **Concepts:** underscore
 
     for _, e := range os.Environ() {
@@ -62,7 +62,7 @@
 
 I got the variable-value pair. Let me split them out.
 
-#### Split the values by = 
+### Split the values by = 
 **Concepts:** strings.Split(), array
 
     for _, e := range os.Environ() {
@@ -78,7 +78,7 @@ I got the variable-value pair. Let me split them out.
 
 **Result:** I split the values and got arrays
 
-#### Get only the environment variable names
+### Get only the environment variable names
 **Concepts:** array
 
     for _, e := range os.Environ() {
