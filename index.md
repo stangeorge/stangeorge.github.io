@@ -22,7 +22,7 @@
 ___
 
 ### Get the variables separately using range
-**Concepts:** for-loop, range
+**Concepts:** creating an initializing a variable, for-loop, range
 
     for e := range os.Environ() {
       fmt.Println(e)
