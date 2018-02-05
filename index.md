@@ -18,7 +18,9 @@
 [TERM_PROGRAM=vscode VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh VIRTUALENVWRAPPER_PROJECT_FILENAME=.project TERM...]
 
 **Result:** I got all the variables in a single block. Let me try to separate this out.
+
 ___
+
 ### Get the variables separately using range
 **Concepts:** for-loop, range
 
@@ -33,7 +35,9 @@ ___
 >1
 
 **Result:** I got only the index values. Let me get the variables.
+
 ___
+
 ### Get both index and values variables separately
 **Concepts:** indexes and values in a for-loop
 
@@ -46,7 +50,9 @@ ___
 1 VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
 
 **Result:** I got the index and variables. Let me ignore the index.
+
 ___
+
 ### Ignore index using underscore
 **Concepts:** underscore
 
@@ -60,8 +66,10 @@ ___
 >
 >VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
 
-I got the variable-value pair. Let me split them out.
+**Result:**I got the variable-value pair. Let me split them out.
+
 ___
+
 ### Split the values by = 
 **Concepts:** strings.Split(), array
 
@@ -77,7 +85,9 @@ ___
 >[VIRTUALENVWRAPPER_SCRIPT /usr/local/bin/virtualenvwrapper.sh]
 
 **Result:** I split the values and got arrays
+
 ___
+
 ### Get only the environment variable names
 **Concepts:** array
 
@@ -92,4 +102,5 @@ ___
 >VIRTUALENVWRAPPER_SCRIPT
 
 **Result:** I got the first element in an array
+
 ___
