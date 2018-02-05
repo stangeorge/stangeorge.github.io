@@ -95,6 +95,7 @@ ___
       pair := strings.Split(e, "=")
       fmt.Println(pair[0])
     }
+    
 >Stanleys-MacBook-Air:crypto stan$ go run crypto.go
 >
 >TERM_PROGRAM
