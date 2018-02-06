@@ -3,8 +3,8 @@
 [Find Environment Variables](#find-environment-variables)  
 [Get the variables separately using range](#get-the-variables-separately-using-range)  
 [Get both index and values variables separately](#get-both-index-and-values-variables-separately)  
-[Ignore index using underscore](#ignore-index-using-underscrore)  
-[Split the values by =](#split-the-values-by-=)  
+[Ignore index using underscore](#ignore-index-using-undersrore)  
+[Split the values](#split-the-values)  
 [Get only the environment variable names](#get-only-the-environment-variable-names)  
 
 ### Find Environment Variables
@@ -77,7 +77,7 @@ ___
 
 ___
 
-### Split the values by =
+### Split the values
 **Concepts:** strings.Split(), array
 
     for _, e := range os.Environ() {
