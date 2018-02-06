@@ -3,7 +3,7 @@
 [Find Environment Variables](#find-environment-variables)  
 [Get the variables separately using range](#get-the-variables-separately-using-range)  
 [Get both index and values variables separately](#get-both-index-and-values-variables-separately)  
-[Ignore index using underscore](#ignore-index-using-undersrore)  
+[Ignore index using underscore](#ignore-index-using-underscore)  
 [Split the values](#split-the-values)  
 [Get only the environment variable names](#get-only-the-environment-variable-names)  
 
