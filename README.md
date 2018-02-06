@@ -6,8 +6,8 @@
 [Ignore index using underscore](#ignore-index-using-underscore)  
 [Split the values](#split-the-values)  
 [Get only the environment variable names](#get-only-the-environment-variable-names)  
-[Call a function](#call-a-function)
-[Concurrency](#concurrency)
+[Call a function](#call-a-function)  
+[Concurrency](#concurrency) . 
 
 ### Find Environment Variables
 **Concepts:** package, imports, main function, printing a line, running a go program.
