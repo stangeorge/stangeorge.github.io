@@ -1,11 +1,11 @@
 ## Learning Go Language by building over a simple example
 
 [Find Environment Variables](#find-environment-variables)  
-[Get the variables separately using range](#get-the-variables-separately-suing-range)  
-[Get both index and values variables separately](get-both-index-and-values-variables-separately#)  
-[Ignore index using underscore](ignore-index-using-underscrore#)  
-[Split the values by =](split-the-values-by-=#)  
-[Get only the environment variable names](#get-only-the-environment-variable-names) . 
+[Get the variables separately using range](#get-the-variables-separately-using-range)  
+[Get both index and values variables separately](#get-both-index-and-values-variables-separately)  
+[Ignore index using underscore](#ignore-index-using-underscrore)  
+[Split the values by =](#split-the-values-by-=)  
+[Get only the environment variable names](#get-only-the-environment-variable-names)  
 
 ### Find Environment Variables
 **Concepts:** package, imports, main function, printing a line, running a go program.
