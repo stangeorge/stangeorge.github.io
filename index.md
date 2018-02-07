@@ -8,6 +8,7 @@
 [Get only the environment variable names](#get-only-the-environment-variable-names)  
 [Call a function](#call-a-function)  
 [Concurrency](#concurrency)  
+[Have the routines finish before main](#have-the-routines-finish-before-main)
 
 ### Find Environment Variables
 **Concepts:** package, imports, main function, printing a line, running a go program.
@@ -118,20 +119,17 @@ ___
 ### Call a function
 **Concepts:** function, parameters
 
-        func printenviron(e string, channel chan string) {
-            time.Sleep(10 * time.Millisecond)
-            fmt.Println(e)
-        }
+    func printenviron(e string) {
+        time.Sleep(10 * time.Millisecond)
+        fmt.Println(e)
+    }
 
-        func main() {
-            channel := make(chan string)
-            for _, e := range os.Environ() {
-                pair := strings.Split(e, "=")
-                printenviron(pair[0], channel)
-            }
+    func main() {
+        for _, e := range os.Environ() {
+            pair := strings.Split(e, "=")
+            printenviron(pair[0])
         }
-
-**Result:** Called a function in a loop. Let me see if I can reduce the execution time
+    }
 
 > Stanleys-MacBook-Air:crypto stan$ time go run crypto.go
 >
@@ -141,25 +139,27 @@ ___
 >
 >sys     0m0.097s
 
+**Result:** Called a function in a loop. Let me see if I can reduce the execution time
+
 ___
 
 ### Concurrency
 **Concepts:** go routines, channels
 
-        func printenviron(e string, channel chan string) {
-            time.Sleep(10 * time.Millisecond)
-            fmt.Println(e)
-            channel <- e
-        }
+    func printenviron(e string, channel chan string) {
+        time.Sleep(10 * time.Millisecond)
+        fmt.Println(e)
+        channel <- e
+    }
 
-        func main() {
-            channel := make(chan string)
-            for _, e := range os.Environ() {
-                pair := strings.Split(e, "=")
-                go printenviron(pair[0], channel)
-            }
-            fmt.Println(<-channel)
+    func main() {
+        channel := make(chan string)
+        for _, e := range os.Environ() {
+            pair := strings.Split(e, "=")
+            go printenviron(pair[0], channel)
         }
+        fmt.Println(<-channel) //outside the for-loop
+    }
 
 >Stanleys-MacBook-Air:crypto stan$ time go run crypto.go
 >
@@ -171,4 +171,54 @@ ___
 >
 >sys     0m0.103s
 
-**Result:** Called a method concurrently many times. They communicate with the main thread using channel and pass it the variable name. Real time for this was 0m0.291s vs 0m0.616s if this was called sequentially in a loop.
+**Result:** Called a method concurrently many times. They communicate with the main thread using channel and pass it the variable name. Real time for this was 0m0.291s vs 0m0.616s if this was called sequentially in a loop. HOWEVER, this does not mean that all the routines finished before the main thread finished.
+
+### Have the routines finish before main
+**Concepts:** go routines, channels
+
+    func main() {
+        channel := make(chan string)
+        for _, e := range os.Environ() {
+            pair := strings.Split(e, "=")
+            go printenviron(pair[0], channel)
+            fmt.Println(<-channel) //inside the for-loop
+        }
+    }
+
+>Stanleys-MacBook-Air:crypto stan$ time go run crypto.go
+> 
+>TERM_PROGRAM
+>
+>real    0m0.654s
+>
+>user    0m0.205s
+>
+>sys     0m0.109s
+
+**Result:** Moving the "fmt.Println(<-channel)" inside the for-loop makes the main function wait till it gets a response from all the routines. Note that this took around the same 0.654s as the prior sequential run that took 0.616s. Lets see if we can make this run in parallel.
+
+### Parallel run on multiple cores
+**Concepts:** runtime, cores
+
+    func main() {
+        runtime.GOMAXPROCS(runtime.NumCPU()) //number of CPUs
+        
+        channel := make(chan string)
+        for _, e := range os.Environ() {
+            pair := strings.Split(e, "=")
+            go printenviron(pair[0], channel)
+            fmt.Println(<-channel)
+        }
+    }
+
+>Stanleys-MacBook-Air:crypto stan$ time go run crypto.go
+>
+>TERM_PROGRAM
+>
+>real    0m0.646s
+>
+>user    0m0.206s
+>
+sys     0m0.109s
+
+**Results** We set GOMAXPROCS to the max CPUs we have. This did not seem to affect the execution time. It was still around 0.646s vs the sequential 0.616s. So no gain in speed yet.
