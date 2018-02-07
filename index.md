@@ -9,7 +9,7 @@
 [Call a function](#call-a-function)  
 [Concurrency](#concurrency)  
 [Have the routines finish before main](#have-the-routines-finish-before-main)  
-[Parallel run on multiple CPUs](#parallel-run-on-multiple-CPUs)  
+[Parallel run on multiple CPUs](#parallel-run-on-multiple-cpus)  
 
 ### Find Environment Variables
 **Concepts:** package, imports, main function, printing a line, running a go program.
