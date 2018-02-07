@@ -8,7 +8,8 @@
 [Get only the environment variable names](#get-only-the-environment-variable-names)  
 [Call a function](#call-a-function)  
 [Concurrency](#concurrency)  
-[Have the routines finish before main](#have-the-routines-finish-before-main)
+[Have the routines finish before main](#have-the-routines-finish-before-main)  
+[Parallel run on multiple CPUs](#parallel-run-on-multiple-cpus)  
 
 ### Find Environment Variables
 **Concepts:** package, imports, main function, printing a line, running a go program.
@@ -197,7 +198,7 @@ ___
 
 **Result:** Moving the "fmt.Println(<-channel)" inside the for-loop makes the main function wait till it gets a response from all the routines. Note that this took around the same 0.654s as the prior sequential run that took 0.616s. Lets see if we can make this run in parallel.
 
-### Parallel run on multiple cores
+### Parallel run on multiple CPUs
 **Concepts:** runtime, cores
 
     func main() {
