@@ -174,6 +174,8 @@ ___
 
 **Result:** Called a method concurrently many times. They communicate with the main thread using channel and pass it the variable name. Real time for this was 0m0.291s vs 0m0.616s if this was called sequentially in a loop. HOWEVER, this does not mean that all the routines finished before the main thread finished.
 
+___
+
 ### Have the routines finish before main
 **Concepts:** go routines, channels
 
@@ -197,6 +199,8 @@ ___
 >sys     0m0.109s
 
 **Result:** Moving the "fmt.Println(<-channel)" inside the for-loop makes the main function wait till it gets a response from all the routines. Note that this took around the same 0.654s as the prior sequential run that took 0.616s. Lets see if we can make this run in parallel.
+
+___
 
 ### Parallel run on multiple CPUs
 **Concepts:** runtime, cores
