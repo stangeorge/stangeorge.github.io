@@ -8,8 +8,8 @@
 [Get only the environment variable names](#get-only-the-environment-variable-names)  
 [Call a function](#call-a-function)  
 [Concurrency](#concurrency)  
-[Have the routines finish before main](#have-the-routines-finish-before-main)
-[Parallel run on multiple CPUs](#parallel-run-on-multiple-CPUs)
+[Have the routines finish before main](#have-the-routines-finish-before-main)  
+[Parallel run on multiple CPUs](#parallel-run-on-multiple-CPUs)  
 
 ### Find Environment Variables
 **Concepts:** package, imports, main function, printing a line, running a go program.
