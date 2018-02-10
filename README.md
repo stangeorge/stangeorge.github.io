@@ -187,7 +187,7 @@ learngo $ time go run learn.go
 >user    0m0.205s  
 >sys     0m0.109s  
 
-**Result:** Moving the "fmt.Println(<-channel)" inside the for-loop makes the main function wait till it gets a response from all the routines. Note that this took around the same 0.654s as the prior sequential run that took 0.616s. Lets see if we can make this run in parallel.
+**Result:** Moving the `fmt.Println(<-channel)` inside the for-loop makes the main function wait till it gets a response from all the routines. Note that this took around the same 0.654s as the prior sequential run that took 0.616s. Lets see if we can make this run in parallel.
 
 ___
 
@@ -195,7 +195,8 @@ ___
 **Concepts:** runtime, cores
 
     func main() {
-        runtime.GOMAXPROCS(runtime.NumCPU()) //number of CPUs
+        runtime.
+	PROCS(runtime.NumCPU()) //number of CPUs
         
         channel := make(chan string)
         for _, e := range os.Environ() {
@@ -212,7 +213,7 @@ learngo $ time go run learn.go
 >user    0m0.206s  
 sys     0m0.109s  
 
-**Results** We set GOMAXPROCS to the max CPUs we have. This did not seem to affect the execution time. It was still around 0.646s vs the sequential 0.616s. So no gain in speed yet.
+**Results** We set `GOMAXPROCS` to the max CPUs we have. This did not seem to affect the execution time. It was still around 0.646s vs the sequential 0.616s. So no gain in speed yet.
 
 ___
 
