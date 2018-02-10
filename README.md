@@ -241,6 +241,9 @@ sys     0m0.109s
             return fibonacci(n-1) + fibonacci(n-2)
         }
     }
+    func main() {
+    	fmt.Println(fibonacci(40))
+    }
 
 **Results** Recursion in action
 >Stanleys-MacBook-Air:learngo stan$ time go run learn.go
