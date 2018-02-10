@@ -1,5 +1,6 @@
 ## Learning Go Language by building over a simple example
 
+### LEVEL 1
 [Find Environment Variables](#find-environment-variables)  
 [Get the variables separately using range](#get-the-variables-separately-using-range)  
 [Get both index and values variables separately](#get-both-index-and-values-variables-separately)  
@@ -10,7 +11,10 @@
 [Concurrency](#concurrency)  
 [Have the routines finish before main](#have-the-routines-finish-before-main)  
 [Parallel run on multiple CPUs](#parallel-run-on-multiple-cpus)  
-[Fibonacci](#fibonacci)
+
+### LEVEL 2
+[Fibonacci Using Recursion](#fibonacci-using-recursion)  
+[Fibonacci Using Iteration](#fibonacci-using-iteration)  
 
 ### Find Environment Variables
 **Concepts:** package, imports, main function, printing a line, running a go program.
@@ -26,8 +30,8 @@
       fmt.Println(os.Environ())
     }
 
->Stanleys-MacBook-Air:learngo stan$ go run learn.go
-[TERM_PROGRAM=vscode VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh VIRTUALENVWRAPPER_PROJECT_FILENAME=.project TERM...]
+>learngo $ go run learn.go  
+>[TERM_PROGRAM=vscode VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh VIRTUALENVWRAPPER_PROJECT_FILENAME=.project TERM...]
 
 **Result:** I got all the variables in a single block. Let me try to separate this out.
 
@@ -40,11 +44,9 @@ ___
       fmt.Println(e)
     }
 
->Stanleys-MacBook-Air:learngo stan$ go run learn.go 
->
->0
->
->1
+>learngo $ go run learn.go  
+>0  
+>1  
 
 **Result:** I got only the index values. Let me get the variables.
 
@@ -57,9 +59,9 @@ ___
       fmt.Println(i, e)
     }
 
->Stanleys-MacBook-Air:learngo stan$ go run learn.go
-0 TERM_PROGRAM=vscode
-1 VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
+>learngo $ go run learn.go  
+>0 TERM_PROGRAM=vscode  
+>1 VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh  
 
 **Result:** I got the index and variables. Let me ignore the index.
 
@@ -72,11 +74,9 @@ ___
       fmt.Println(e)
     }
 
->Stanleys-MacBook-Air:learngo stan$ go run learn.go>
->
->TERM_PROGRAM=vscode
->
->VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
+>learngo $ go run learn.go  
+>TERM_PROGRAM=vscode  
+>VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh  
 
 **Result:**I got the variable-value pair. Let me split them out.
 
@@ -90,11 +90,9 @@ ___
       fmt.Println(pair)
     }
 
->Stanleys-MacBook-Air:learngo stan$ go run learn.go
->
->[TERM_PROGRAM vscode]
->
->[VIRTUALENVWRAPPER_SCRIPT /usr/local/bin/virtualenvwrapper.sh]
+>learngo $ go run learn.go  
+>[TERM_PROGRAM vscode]  
+>[VIRTUALENVWRAPPER_SCRIPT /usr/local/bin/virtualenvwrapper.sh]  
 
 **Result:** I split the values and got arrays
 
@@ -108,11 +106,9 @@ ___
       fmt.Println(pair[0])
     }
     
->Stanleys-MacBook-Air:learngo stan$ go run learn.go
->
->TERM_PROGRAM
->
->VIRTUALENVWRAPPER_SCRIPT
+>learngo $ go run learn.go  
+>TERM_PROGRAM  
+>VIRTUALENVWRAPPER_SCRIPT  
 
 **Result:** I got the first element in an array
 
@@ -133,13 +129,11 @@ ___
         }
     }
 
-> Stanleys-MacBook-Air:learngo stan$ time go run learn.go
->
->real    0m0.616s
->
->user    0m0.146s
->
->sys     0m0.097s
+>learngo $ time go run learn.go  
+>  
+>real    0m0.616s  
+>user    0m0.146s  
+>sys     0m0.097s  
 
 **Result:** Called a function in a loop. Let me see if I can reduce the execution time
 
@@ -163,15 +157,12 @@ ___
         fmt.Println(<-channel) //outside the for-loop
     }
 
->Stanleys-MacBook-Air:learngo stan$ time go run learn.go
->
->VIRTUALENVWRAPPER_VIRTUALENV
->
->real    0m0.291s
->
->user    0m0.219s
->
->sys     0m0.103s
+learngo $ time go run learn.go  
+>VIRTUALENVWRAPPER_VIRTUALENV  
+>  
+>real    0m0.291s  
+>user    0m0.219s  
+>sys     0m0.103s  
 
 **Result:** Called a method concurrently many times. They communicate with the main thread using channel and pass it the variable name. Real time for this was 0m0.291s vs 0m0.616s if this was called sequentially in a loop. HOWEVER, this does not mean that all the routines finished before the main thread finished.
 
@@ -189,17 +180,14 @@ ___
         }
     }
 
->Stanleys-MacBook-Air:learngo stan$ time go run learn.go
-> 
->TERM_PROGRAM
->
->real    0m0.654s
->
->user    0m0.205s
->
->sys     0m0.109s
+learngo $ time go run learn.go  
+>TERM_PROGRAM 
+>  
+>real    0m0.654s  
+>user    0m0.205s  
+>sys     0m0.109s  
 
-**Result:** Moving the "fmt.Println(<-channel)" inside the for-loop makes the main function wait till it gets a response from all the routines. Note that this took around the same 0.654s as the prior sequential run that took 0.616s. Lets see if we can make this run in parallel.
+**Result:** Moving the `fmt.Println(<-channel)` inside the for-loop makes the main function wait till it gets a response from all the routines. Note that this took around the same 0.654s as the prior sequential run that took 0.616s. Lets see if we can make this run in parallel.
 
 ___
 
@@ -207,7 +195,8 @@ ___
 **Concepts:** runtime, cores
 
     func main() {
-        runtime.GOMAXPROCS(runtime.NumCPU()) //number of CPUs
+        runtime.
+	PROCS(runtime.NumCPU()) //number of CPUs
         
         channel := make(chan string)
         for _, e := range os.Environ() {
@@ -217,42 +206,67 @@ ___
         }
     }
 
->Stanleys-MacBook-Air:learngo stan$ time go run learn.go
->
->TERM_PROGRAM
->
->real    0m0.646s
->
->user    0m0.206s
->
-sys     0m0.109s
+learngo $ time go run learn.go  
+>TERM_PROGRAM  
+>  
+>real    0m0.646s  
+>user    0m0.206s  
+sys     0m0.109s  
 
-**Results** We set GOMAXPROCS to the max CPUs we have. This did not seem to affect the execution time. It was still around 0.646s vs the sequential 0.616s. So no gain in speed yet.
+**Results** We set `GOMAXPROCS` to the max CPUs we have. This did not seem to affect the execution time. It was still around 0.646s vs the sequential 0.616s. So no gain in speed yet.
 
-### Fibonacci
-**Concepts:** Recursion, switch-case
+___
 
-    func fibonacci(n int) int {
+### Fibonacci Using Recursion
+**Concepts:** Recursion, switch-case.
+
+    func fibonacciRecursive(n int) int {
         switch n {
         case 0: return 0
         case 1: fallthrough
         case 2: return 1
         default:
-            return fibonacci(n-1) + fibonacci(n-2)
+            return fibonacciRecursive(n-1) + fibonacciRecursive(n-2)
         }
     }
     func main() {
-    	fmt.Println(fibonacci(40))
+    	fmt.Println(fibonacciRecursive(50))
     }
 
-**Results** Recursion in action
->Stanleys-MacBook-Air:learngo stan$ time go run learn.go
->
->102334155
->
->real    0m0.927s
->
->user    0m0.846s
->
->sys     0m0.115s
-> Stanleys-MacBook-Air:learngo stan$
+>learngo $ time go run learn.go  
+>12586269025  
+
+>real    2m36.339s  
+>user    2m31.408s  
+>sys     0m1.105s   
+
+**Results** Recursion in action. However, it takes 2 minutes 36 seconds to find the 50th number in the Fibonacci series. Lets see if there is a faster way.
+
+___
+
+### Fibonacci Using Iteration
+**Concepts:** for-loop
+
+    func fibonacciIterative(n int) int {
+        x, y := 0, 1
+        for i:=n; i > 1; i-- {
+            x, y = y, x+y
+        }
+        return y
+    }
+    func main() {
+	    fmt.Println(fibonacciRecursive(50))
+    }
+    
+>learngo $time go run learn.go  
+>12586269025  
+>  
+>real    0m0.276s  
+>user    0m0.204s  
+>sys     0m0.102s  
+    
+**Results** Faster execution. It takes only 276ms vs 2m36s in the recursive version
+
+___
+
+###
