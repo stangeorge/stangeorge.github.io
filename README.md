@@ -10,6 +10,7 @@
 [Concurrency](#concurrency)  
 [Have the routines finish before main](#have-the-routines-finish-before-main)  
 [Parallel run on multiple CPUs](#parallel-run-on-multiple-cpus)  
+[Fibonacci](#fibonacci)
 
 ### Find Environment Variables
 **Concepts:** package, imports, main function, printing a line, running a go program.
@@ -25,7 +26,7 @@
       fmt.Println(os.Environ())
     }
 
->Stanleys-MacBook-Air:crypto stan$ go run crypto.go
+>Stanleys-MacBook-Air:learngo stan$ go run learn.go
 [TERM_PROGRAM=vscode VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh VIRTUALENVWRAPPER_PROJECT_FILENAME=.project TERM...]
 
 **Result:** I got all the variables in a single block. Let me try to separate this out.
@@ -39,7 +40,7 @@ ___
       fmt.Println(e)
     }
 
->Stanleys-MacBook-Air:crypto stan$ go run crypto.go 
+>Stanleys-MacBook-Air:learngo stan$ go run learn.go 
 >
 >0
 >
@@ -56,7 +57,7 @@ ___
       fmt.Println(i, e)
     }
 
->Stanleys-MacBook-Air:crypto stan$ go run crypto.go
+>Stanleys-MacBook-Air:learngo stan$ go run learn.go
 0 TERM_PROGRAM=vscode
 1 VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
 
@@ -71,7 +72,7 @@ ___
       fmt.Println(e)
     }
 
->Stanleys-MacBook-Air:crypto stan$ go run crypto.go>
+>Stanleys-MacBook-Air:learngo stan$ go run learn.go>
 >
 >TERM_PROGRAM=vscode
 >
@@ -89,7 +90,7 @@ ___
       fmt.Println(pair)
     }
 
->Stanleys-MacBook-Air:crypto stan$ go run crypto.go
+>Stanleys-MacBook-Air:learngo stan$ go run learn.go
 >
 >[TERM_PROGRAM vscode]
 >
@@ -107,7 +108,7 @@ ___
       fmt.Println(pair[0])
     }
     
->Stanleys-MacBook-Air:crypto stan$ go run crypto.go
+>Stanleys-MacBook-Air:learngo stan$ go run learn.go
 >
 >TERM_PROGRAM
 >
@@ -132,7 +133,7 @@ ___
         }
     }
 
-> Stanleys-MacBook-Air:crypto stan$ time go run crypto.go
+> Stanleys-MacBook-Air:learngo stan$ time go run learn.go
 >
 >real    0m0.616s
 >
@@ -162,7 +163,7 @@ ___
         fmt.Println(<-channel) //outside the for-loop
     }
 
->Stanleys-MacBook-Air:crypto stan$ time go run crypto.go
+>Stanleys-MacBook-Air:learngo stan$ time go run learn.go
 >
 >VIRTUALENVWRAPPER_VIRTUALENV
 >
@@ -188,7 +189,7 @@ ___
         }
     }
 
->Stanleys-MacBook-Air:crypto stan$ time go run crypto.go
+>Stanleys-MacBook-Air:learngo stan$ time go run learn.go
 > 
 >TERM_PROGRAM
 >
@@ -216,7 +217,7 @@ ___
         }
     }
 
->Stanleys-MacBook-Air:crypto stan$ time go run crypto.go
+>Stanleys-MacBook-Air:learngo stan$ time go run learn.go
 >
 >TERM_PROGRAM
 >
@@ -227,3 +228,28 @@ ___
 sys     0m0.109s
 
 **Results** We set GOMAXPROCS to the max CPUs we have. This did not seem to affect the execution time. It was still around 0.646s vs the sequential 0.616s. So no gain in speed yet.
+
+### Fibonacci
+**Concepts:** Recursion, switch-case
+
+    func fibonacci(n int) int {
+        switch n {
+        case 0: return 0
+        case 1: fallthrough
+        case 2: return 1
+        default:
+            return fibonacci(n-1) + fibonacci(n-2)
+        }
+    }
+
+**Results** Recursion in action
+>Stanleys-MacBook-Air:learngo stan$ time go run learn.go
+>
+>102334155
+>
+>real    0m0.927s
+>
+>user    0m0.846s
+>
+>sys     0m0.115s
+> Stanleys-MacBook-Air:learngo stan$
