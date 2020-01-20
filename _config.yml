@@ -2,6 +2,9 @@ theme: jekyll-theme-minimal
 title: [Stan George]
 description: [stanleygeorge.com]
 collections:
-  pages       :
+  articles    :
+    output    : true
+    permalink : /:collection/:path
+  books       :
     output    : true
     permalink : /:collection/:path
