@@ -7,3 +7,5 @@
 {% for book in site.books %}
   <a href="{{ book.url }}">{{ book.title }}</a>  
 {% endfor %}
+
+<a href ="https://stangeorge.github.io/atom.xml">RSS</a>
