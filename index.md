@@ -1,9 +1,9 @@
 #### Articles
-{% for page in site.articles %}
-  <a href="{{ page.url }}">{{ page.title }}</a>  
+{% for article in site.articles %}
+  <a href="{{ article.url }}">{{ article.title }}</a>  
 {% endfor %}
 
 #### Book Reviews
-{% for page in site.books %}
-  <a href="{{ page.url }}">{{ page.title }}</a>  
+{% for book in site.books %}
+  <a href="{{ book.url }}">{{ book.title }}</a>  
 {% endfor %}
