@@ -4,7 +4,6 @@ title: How I interview a Software Engineer
 category: management
 tags: [management, hiring]
 ---
-# How I interview a Software Engineer
 These are some of the guidelines that my team and I follow  
 ## What makes a Lead, Senior or Software Engineer?
 
