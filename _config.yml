@@ -10,3 +10,9 @@ collections   :
     permalink : /:collection/:path
 atom_feed     :
   path        : atom.xml
+
+# Site Author
+author:
+  name             : "Stan George"
+  avatar           : "stan.jpg"
+  location         : "Chicago"
