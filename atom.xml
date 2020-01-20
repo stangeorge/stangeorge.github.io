@@ -5,10 +5,10 @@ layout: feed
 <feed xmlns="http://www.w3.org/2005/Atom">
 
 	<title>Stan George</title>
-	<link href="http://stangeorge.github.io/blog/atom.xml" rel="self"/>
-	<link href="http://stangeorge.github.io/blog"/>
+	<link href="http://stangeorge.github.io/atom.xml" rel="self"/>
+	<link href="http://stangeorge.github.io"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
-	<id>http://stangeorge.github.io/blog</id>
+	<id>http://stangeorge.github.io</id>
 	<author>
 		<name>Stan George</name>
 		<email></email>
