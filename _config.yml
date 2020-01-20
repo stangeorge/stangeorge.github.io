@@ -16,3 +16,10 @@ author:
   name             : "Stan George"
   avatar           : "stan.jpg"
   location         : "Chicago"
+
+# Site Footer
+footer:
+  links:
+    - label: "RSS"
+      icon: 
+      url: atom.xml
