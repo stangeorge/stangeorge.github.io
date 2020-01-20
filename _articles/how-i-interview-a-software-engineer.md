@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How I interview a Software Engineer
+author: Stan George
 category: management
 tags: [management, hiring]
 ---
