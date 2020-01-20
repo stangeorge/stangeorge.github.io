@@ -1,3 +1,7 @@
 theme: jekyll-theme-minimal
 title: [Stan George]
 description: [stanleygeorge.com]
+collections:
+  pages       :
+    output    : true
+    permalink : /:collection/:path
