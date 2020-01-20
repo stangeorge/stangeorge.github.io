@@ -1,0 +1,11 @@
+{% for article in site.articles %}
+		<entry>
+			<title>{{ article.title }}</title>
+			<link href="http://stangeorge.github.io{{ article.url }}"/>
+			<updated>{{ article.date | date_to_xmlschema }}</updated>
+			<id>http://stanlgeorge.github.io{{ article.id }}</id>
+			<content type="html">{{ article.content | xml_escape }}</content>
+		</entry>
+	{% endfor %}
+
+</feed>
