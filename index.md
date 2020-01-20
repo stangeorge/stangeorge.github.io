@@ -6,17 +6,17 @@ Learning the Go language by building over simple examples [https://stangeorge.gi
 
 Articles on software and electronics [http://make.stanleygeorge.com](http://make.stanleygeorge.com)
 
-<div class="posts">
-  {% for post in site.posts %}
-  <article class="post">    
+<div class="pages">
+  {% for post in site.pages %}
+  <article class="page">    
     
-    <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+    <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
 
     <div class="entry">
-      {{ post.content | truncatewords:40}}
+      {{ page.content | truncatewords:40}}
     </div>
     
-    <a href="{{ post.url }}" class="read-more">Read More</a>
+    <a href="{{ page.url }}" class="read-more">Read More</a>
   </article>
   {% endfor %}
 </div>
