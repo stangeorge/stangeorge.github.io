@@ -1,5 +1,8 @@
 ---
+layout: post
 title: 7 things a Software Engineer should look for in their next team
+category: management
+tags: [management, hiring]
 ---
 # 7 things a Software Engineer should look for in their next team
 
