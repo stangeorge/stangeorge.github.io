@@ -1,10 +1,26 @@
-{% for article in site.articles %}
+---
+layout: feed
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+	<title>Stan George</title>
+	<link href="http://stangeorge.github.io/blog/atom.xml" rel="self"/>
+	<link href="http://stangeorge.github.io/blog"/>
+	<updated>{{ site.time | date_to_xmlschema }}</updated>
+	<id>http://stangeorge.github.io/blog</id>
+	<author>
+		<name>Stan George</name>
+		<email></email>
+	</author>
+
+	{% for post in site.articles %}
 		<entry>
-			<title>{{ article.title }}</title>
-			<link href="http://stangeorge.github.io{{ article.url }}"/>
-			<updated>{{ article.date | date_to_xmlschema }}</updated>
-			<id>http://stanlgeorge.github.io{{ article.id }}</id>
-			<content type="html">{{ article.content | xml_escape }}</content>
+			<title>{{ post.title }}</title>
+			<link href="http://stangeorge.github.io{{ post.url }}"/>
+			<updated>{{ post.date | date_to_xmlschema }}</updated>
+			<id>http://stangeorge.github.io{{ post.id }}</id>
+			<content type="html">{{ post.content | xml_escape }}</content>
 		</entry>
 	{% endfor %}
 
