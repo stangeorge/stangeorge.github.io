@@ -1,8 +1,6 @@
 #### Articles
-<div class="pages">
-  {% for page in site.pages %}
-    <a href="{{ page.url }}">{{ page.title }}</a>  
-  {% endfor %}
-</div>
+{% for page in site.pages %}
+  <a href="{{ page.url }}">{{ page.title }}</a>  
+{% endfor %}
 
 #### Book Reviews
