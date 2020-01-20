@@ -1,5 +1,4 @@
 ---
-layout: post
 title: How I interview a Software Engineer
 ---
 # How I interview a Software Engineer
