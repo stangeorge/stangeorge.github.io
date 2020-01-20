@@ -13,19 +13,19 @@ It’s not the years of experience. It’s not full-stack development. It depend
 You could have two decades of experience in a language. If the team writes their algorithms, creates their pipeline, deploys their stack, maintains their own blue/green deployments, expect to know many of those if you are applying for a Senior role.  
 ## What I don’t do
 
-    I don’t do pre-screens with HackerRank or any online tool.
+* I don’t do pre-screens with HackerRank or any online tool.
 
 After a few candidates take it, the questions start popping up on StackOverflow and other places. Yeah, many of these sites have a library of a gazillion questions. I don’t bother to keep up with what’s leaked and what’s not.
 
-    I don’t ask candidates to do a homework assignment.
+* I don’t ask candidates to do a homework assignment.
 
 I detest them. I was interviewing for the position of Engineering Manager. At one startup, they asked me to write a set of REST APIs to do CRUD operations on a social media platform. The guideline was to do it in 2 hours. Yeah, right! I was rusty but I figured out how to configure the build manager. I wrapped my head around the arcane MVC framework they wanted me to use. I researched a library to interact with the social media platform. I got the basic thing working with unit tests and all. I had taken a whole weekend by now with my kids screaming around me. So did I submit it? No way! I needed to figure out multi-lingual support, Unicode, edge cases, performance, scalability, deadlocks. It was a mind game and I just wanted it to end. I submitted it close to the 5-day deadline, passed and they invited me onsite.
 
-    I don’t ask people to design frigging Twitter or Divvy or Google.
+* I don’t ask people to design frigging Twitter or Divvy or Google.
 
 C’mon man! If I rocked at this, do you think I would have applied for a position as a Software Engineer? Don’t you think I would be one of those people at some mega consulting company drawing pretty pictures for clients? Or even running my own company?
 
-    I won’t ask for an NDA for my interview
+* I won’t ask for an NDA for my interview
 
 True story. I signed one when I was interviewing so I can’t talk about it. Kidding — I signed it but never went to that interview.  
 
