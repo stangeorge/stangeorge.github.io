@@ -2,8 +2,8 @@
 layout: post
 title: Tips to hire a Software Engineer
 author: Stan George
-category: leadership
-tags: [hiring]
+category: Leadership
+tags: [Hiring]
 ---
 
 You see a lot of posts about how hiring is broken. I’ve used them all and all have flaws. Plagiarism is rampant. Live coding scares the shit out of candidates. Whiteboards make everyone nervous.
