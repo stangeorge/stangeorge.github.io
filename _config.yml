@@ -2,6 +2,8 @@
 remote_theme  : "mmistakes/minimal-mistakes@4.17.2" 
 title         : [Stan George]
 description   : [stanleygeorge.com]
+plugins       :
+  - jekyll-include-cache
 collections   :
   articles    :
     output    : true
