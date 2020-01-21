@@ -2,8 +2,8 @@
 layout: post
 title: How I interview a Software Engineer
 author: Stan George
-category: management
-tags: [management, hiring]
+category: leadership
+tags: [hiring]
 ---
 These are some of the guidelines that my team and I follow  
 ## What makes a Lead, Senior or Software Engineer?
