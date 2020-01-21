@@ -1,9 +1,23 @@
+# Site settings
 remote_theme  : mmistakes/so-simple-theme
 title         : [Stan George]
 description   : [stanleygeorge.com]
 url           :  https://stanleygeorge.com
+read_time: true
+words_per_minute: 200
+
+# Taxonomy pages
+category_archive_path: "/categories/#"
+tag_archive_path: "/tags/#"
+
 plugins       :
   - jekyll-include-cache
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate  
+
+#Collections
 collections   :
   articles    :
     output    : true
@@ -11,6 +25,7 @@ collections   :
   books       :
     output    : true
     permalink : /:collection/:path
+
 
 # Site Author
 author:
