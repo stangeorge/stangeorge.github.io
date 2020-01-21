@@ -2,8 +2,8 @@
 layout: post
 title: 7 things a Software Engineer should look for in their next team
 author: Stan George
-category: leadership
-tags: [hiring]
+category: Leadership
+tags: [Hiring]
 ---
 
 You should be picky in selecting the next team that you work with. You spend more time at work than with your family so it better be darn good.
