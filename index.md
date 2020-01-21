@@ -9,20 +9,16 @@
 {% endfor %}
 
 #### My favorite books
-* Non-Fiction
-  * Lab Girl by Hope Jahren
-  * The Theory of Everything by Stephen Hawking
-* Science-Fiction
-  * Foundation Trilogy by Isaac Asimov
-  * A Wizard of Earthsea by Ursula K. Le Guin
-* Fiction
-  * The Book Thief by Marcus Zusak
-  * [The Shadow of the Wind](_books/the-shadow-of-the-wind.md) by Carlos Ruiz Zafón
-  * The Shell Collector: Stories by Anthony Doerr
-* Classics
-  * Don Quixote by Miguel de Cervantes
-  * The Count of Monte Cristo by Alexandre Dumas
-  * The Old Man and the Sea by Ernest Hemingway
-* Children's Books
-  * Molly's Pilgrim by Barbara Cohen
+Lab Girl by Hope Jahren (Non-Fiction)  
+The Theory of Everything by Stephen Hawking (Non-Fiction)  
+Foundation Trilogy by Isaac Asimov (Science-Fiction)  
+A Wizard of Earthsea by Ursula K. Le Guin  (Fantasy)  
+The Book Thief by Marcus Zusak (Fiction)  
+[The Shadow of the Wind](_books/the-shadow-of-the-wind.md) by Carlos Ruiz Zafón (Fiction)  
+The Shell Collector: Stories by Anthony Doerr  (Fiction)  
+Don Quixote by Miguel de Cervantes (Classic)  
+The Count of Monte Cristo by Alexandre Dumas (Classic)  
+The Old Man and the Sea by Ernest Hemingway (Classic)  
+Molly's Pilgrim by Barbara Cohen (Children's Book)  
+
   
