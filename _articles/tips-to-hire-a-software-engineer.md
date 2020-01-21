@@ -5,6 +5,9 @@ author: Stan George
 category: leadership
 tags: [hiring]
 ---
+
+*December 2019*
+
 You see a lot of posts about how hiring is broken. I’ve used them all and all have flaws. Plagiarism is rampant. Live coding scares the shit out of candidates. Whiteboards make everyone nervous.
 
 I eliminated most of the pre-screening in my hiring process. I bring in candidates on-site and talk to them in-person. I can end the interview sooner and give back everyone their time back if things do not work out. Its better than a 2-hour HackerRank and a 2-hour homework assignment (which takes 15 hours). All this is unpaid and unfair.
