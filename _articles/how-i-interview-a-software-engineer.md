@@ -5,8 +5,6 @@ author: Stan George
 category: leadership
 tags: [hiring]
 ---
-*October 2019*
-
 These are some of the guidelines that my team and I follow  
 ## What makes a Lead, Senior or Software Engineer?
 
@@ -58,3 +56,5 @@ Be nice. Nervous is okay. Sweaty is okay. Don’t get mad or upset if you can’
 At the end of the interview, you should feel like you rocked it. If not, I need to work at getting better. Ask for my business card at the end of the interview and let me know your experience. I want to know how I could have made it better for you.
 
 If this sounds reasonable, please consider joining my team via our career page. If you are not local to Chicago, I will fly you in and provide lodging. If you are on a visa, I am okay with that. If consulting is your thing, drop me a line and I will work directly with you.
+
+*October 2019*
