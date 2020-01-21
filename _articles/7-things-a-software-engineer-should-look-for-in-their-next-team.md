@@ -5,6 +5,8 @@ author: Stan George
 category: leadership
 tags: [hiring]
 ---
+*November 2019*
+
 You should be picky in selecting the next team that you work with. You spend more time at work than with your family so it better be darn good.
 
 I’ve seen my fair share of BS over the past two decades and have a decent sense of what works.
