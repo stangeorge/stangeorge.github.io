@@ -5,6 +5,8 @@ author: Stan George
 category: leadership
 tags: [hiring]
 ---
+*October 2019*
+
 These are some of the guidelines that my team and I follow  
 ## What makes a Lead, Senior or Software Engineer?
 
