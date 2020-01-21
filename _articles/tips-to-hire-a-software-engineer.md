@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Tips to hire a Software Engineer
-author: Stan George
-category: Leadership
+#author: Stan George
+categories: [Leadership]
 tags: [Hiring]
 ---
 
