@@ -3,6 +3,11 @@
   <a href="{{ article.url }}">{{ article.title }}</a>  
 {% endfor %}
 
+#### Book Reviews
+{% for book in site.books %}
+  <a href="{{ book.url }}">{{ book.title }}</a>  
+{% endfor %}
+
 #### My favorite books
 * Non-Fiction
   * Lab Girl by Hope Jahren
@@ -20,9 +25,4 @@
   * The Old Man and the Sea by Ernest Hemingway
 * Children's Books
   * Molly's Pilgrim by Barbara Cohen
-
-
-#### Book Reviews
-{% for book in site.books %}
-  <a href="{{ book.url }}">{{ book.title }}</a>  
-{% endfor %}
+  
