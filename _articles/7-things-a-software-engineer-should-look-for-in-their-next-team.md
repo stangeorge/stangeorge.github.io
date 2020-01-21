@@ -5,7 +5,6 @@ author: Stan George
 category: leadership
 tags: [hiring]
 ---
-*November 2019*
 
 You should be picky in selecting the next team that you work with. You spend more time at work than with your family so it better be darn good.
 
@@ -82,3 +81,5 @@ I don’t know if you will do good on one of these teams — but if you do, I ca
 ## Conclusion
 
 Thank you for investing a few minutes of your life reading this. I appreciate even more if you found this worthy enough to leave a comment, a like or a share. Please let me know if I missed anything on my list and I will write another blog post with your suggestions. If you are looking to join any of our teams, please drop us a line via our career page. If you are not local to Chicago, I will fly you in and provide lodging. If you are on a visa, I am okay with that. If consulting is your thing, drop me a line and I will work directly with you.
+
+*November 2019*
