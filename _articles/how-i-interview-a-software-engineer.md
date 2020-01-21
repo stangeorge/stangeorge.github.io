@@ -1,8 +1,8 @@
 ---
 layout: post
 title: How I interview a Software Engineer
-author: Stan George
-category: Leadership
+#author: Stan George
+categories: [Leadership]
 tags: [Hiring]
 ---
 These are some of the guidelines that my team and I follow  
