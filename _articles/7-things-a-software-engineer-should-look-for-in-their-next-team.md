@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 7 things a Software Engineer should look for in their next team
-author: Stan George
-category: Leadership
+#author: Stan George
+categories: [Leadership]
 tags: [Hiring]
 ---
 
