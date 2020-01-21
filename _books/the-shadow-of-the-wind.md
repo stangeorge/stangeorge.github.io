@@ -1,7 +1,7 @@
 ---
-layout: post
+#layout: post
 title: The Shadow of the Wind
-author: Carlos Ruiz Zafón
+#author: Carlos Ruiz Zafón
 categories: 
   - Book Review
 tags: 
