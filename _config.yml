@@ -1,7 +1,7 @@
-# theme         : jekyll-theme-minimal
 remote_theme  : mmistakes/so-simple-theme
 title         : [Stan George]
 description   : [stanleygeorge.com]
+url           :  https://stanleygeorge.com
 plugins       :
   - jekyll-include-cache
 collections   :
@@ -11,3 +11,20 @@ collections   :
   books       :
     output    : true
     permalink : /:collection/:path
+
+# Site Author
+author:
+  name: Stan George
+  picture:
+  email: stanleygeorge@gmail.com
+  twitter:
+  links:
+    - title:
+      url: https://stanleygeorge.com
+      icon:
+      
+# Footer Links
+footer_links:
+  - title: Feed
+    url: atom.xml
+    icon: fas fa-rss-square
