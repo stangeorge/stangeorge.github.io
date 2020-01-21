@@ -6,7 +6,7 @@ categories:
   - Book Review
 tags: 
   - Fiction
-  - Carlos Ruiz Zafón]
+  - Carlos Ruiz Zafón
 ---
 
 **by Carlos Ruiz Zafón**
