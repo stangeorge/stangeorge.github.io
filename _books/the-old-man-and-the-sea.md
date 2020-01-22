@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ernest Hemingway: The Old Man and the Sea
+title: Ernest Hemingway - The Old Man and the Sea
 ---
 This is my first Hemingway book. I do not recollect reading him in school. I was aware of his writing style from the book Family Life by Akhil Sharma. It is simple and amazing. This book won the 1953 Pulitzer Prize for fiction. This book also helped Hemingway win the 1954 Nobel Prize for literature.
 
