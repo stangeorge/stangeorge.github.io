@@ -1,13 +1,10 @@
 ---
 layout: post
-title: The Shadow of the Wind
+title: The Shadow of the Wind by Carlos Ruiz Zafón
 #author: Carlos Ruiz Zafón
 #categories: [books]
 #tags: [Fiction, Carlos Ruiz Zafón]
 ---
-
-**by Carlos Ruiz Zafón**
-
 This author turns on a movie projector in your mind. I feel I've walked through Barcelona of the thirties. Zafóns descriptions are vivid and you can almost touch the words. I imagined the world to be dark and gothic.
 
 Zafón is a philosopher. He has lots of quotes and metaphors. Some stick around with you, such as "Memories are worse that bullets." His words are poetic.
