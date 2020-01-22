@@ -8,8 +8,8 @@
 <a href="{{ book.url }}">{{ book.title }}</a>
 {% endfor %}
 
-{% for post in site.categories.books %}
-    <li>{{ post.title }}</li>
+{% for book in site.categories.books %}
+<a href="{{ book.url }}">{{ book.title }}</a>
 {% endfor %}
 
 #### My favorite books
