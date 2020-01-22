@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Shadow of the Wind by Carlos Ruiz Zafón
+title: Carlos Ruiz Zafón: The Shadow of the Wind
 #author: Carlos Ruiz Zafón
 #categories: [books]
 #tags: [Fiction, Carlos Ruiz Zafón]
