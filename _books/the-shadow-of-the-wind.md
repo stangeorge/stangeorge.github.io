@@ -16,3 +16,5 @@ There are a lot of characters in this book and my favorite is Fermin Romero de T
 One of the people concludes "...Juilan was not a man, he was an illness." And it is indeed so. Whoever cares for Julián is cursed to suffer.
 
 There is a sweet sadness throughout the book. My heart got heavy in many places. This is a great book. The mystery grips you till the end.
+
+January 2017
