@@ -7,8 +7,8 @@ read_time: true
 words_per_minute: 200
 
 # Taxonomy pages
-category_archive_path: "/categories/#"
-tag_archive_path: "/tags/#"
+# category_archive_path: "/categories/#"
+# tag_archive_path: "/tags/#"
 
 plugins       :
   - jekyll-include-cache
@@ -16,15 +16,6 @@ plugins       :
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate  
-
-defaults:
-  -
-    scope:
-      path: "_posts/books"      # empty string for all files
-      type: posts   # limit to posts
-    values:
-      is_post: true # automatically set is_post=true for all posts
-
 
 #Collections
 collections   :
