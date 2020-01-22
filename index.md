@@ -8,6 +8,10 @@
 <a href="{{ book.url }}">{{ book.title }}</a>
 {% endfor %}
 
+{% for post in site.categories[books] %}
+    <li>{{ post.title }}</li>
+{% endfor %}
+
 #### My favorite books
 Lab Girl by Hope Jahren (Non-Fiction)  
 The Theory of Everything by Stephen Hawking (Non-Fiction)  
