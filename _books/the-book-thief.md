@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Marcus Zusak - The Book Thief
+title: Marcus Zusak - The Book Thief ☆
 ---
 The book moved me to tears in the last fifty pages. The author lifted my heart in the first part of the book. The book made me happy for small joys of Liesel and Rudy. The last two hundred pages dragged my heart from the skies and dropped it like a bomb. It shattered into pieces and lay at the feet of the author.
 
