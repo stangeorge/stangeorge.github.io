@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Isaac Asimov - Prelude To The Foundation
+title: Isaac Asimov - Prelude To Foundation
 ---
 This is book six of the seven-book Foundation series. Chronologically, this is the first prequel. I read this after the book Foundation and Earth.
 
