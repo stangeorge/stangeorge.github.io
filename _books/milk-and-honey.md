@@ -15,3 +15,5 @@ Kaur is not coy about any topic. She writes about child abuse, physical abuse, i
 The illustrations are haunting. One shows a woman's body as a tree with the arms raised into branches and roots for feet. Another one shows a clock with the numbers falling off. Yet another with a woman on their knees, crying into her hands and an arrow pierced in her back.
 
 I read the 200 pages in an hour or so. But the words and drawings stayed with me for hours. They will stay with me for much longer. This is a beautiful work of art. Calling it a collection of poetry does not do justice to the illustrations.
+
+October 2017
