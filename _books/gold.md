@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Isaac Asimov - Gold: The Final Science Fiction Collection
+title: Isaac Asimov - Gold - The Final Science Fiction Collection
 ---
+
 Part 1 is a set of 15 short stories. The introduction says they've never been published in a book format before. I believe this means that they were published in a science-fiction magazine before. This is a eclectic collection of short-stories. They range from letters to earth from mars, politics, bionic humans and, of course, robots.
 
 Reading "Cal" made me understand what satire was. His short-story "Feghoot And The Courts" is one page. Around 500 words. But it shows so much wit and humor. Same with "Left to Right" which is two pages long. "Gold" is the longest of the stories. It presents challenges to a futuristic movie/play production company. The story goes into creative challenges for the director and a casting director. I say casting director since I do not know what to call the profession of the character Cathcart.
