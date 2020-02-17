@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Isaac Asimov - Foundation Trilogy
+title: Isaac Asimov - Foundation Trilogy ☆
 ---
 Foundation is my first science-fiction book. And it blew me away. I am a huge fan of science-fiction movies but this is so much more. There is the usual advanced technology but the plot is thick. The characters are awesome and the twists are amazing. After reading this I just had to read the other two books: Foundation and Empire, Second Foundation.
 
