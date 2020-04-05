@@ -1,1 +1,2 @@
-*.md linguist-language=Markdown
+*               text=auto
+*.md            text
