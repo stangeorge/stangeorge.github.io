@@ -23,7 +23,7 @@ I detest them. I was interviewing for the position of Engineering Manager. At on
 
 * I don’t ask people to design frigging Twitter or Divvy or Google.
 
-C’mon man! If I rocked at this, do you think I would have applied for a position as a Software Engineer? Don’t you think I would be one of those people at some mega consulting company drawing pretty pictures for clients? Or even running my own company?
+C’mon man! If I rocked at this, do you think I would have applied for a position as a Software Engineer? Don’t you think I would be one of those people at some mega consulting company drawing pretty pictures for clients? Or even running my own company? However, if you are applying at a senior level, expect system design questions. We design a lot of services so this is a critical skill.
 
 * I won’t ask for an NDA for my interview
 
