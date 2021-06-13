@@ -32,6 +32,7 @@
 * Tara Westover - Educated  
 * Ursula K. Le Guin - A Wizard of Earthsea, The Tombs of Atuan, The Farthest Shore, Tehanu, The Other Wind  
 * William Golding - Lord of the Flies
+* Yangsze Choo - The Night Tiger
 
 #### I liked these non-fiction books
 
