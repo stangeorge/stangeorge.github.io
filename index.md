@@ -4,7 +4,9 @@
 {% endfor %}
 
 * **I liked these fiction books**  
+  * Akhil Sharma - Family Life
   * Anthony Doerr - The Shell Collector
+  * Aravind Adiga - The White Tiger  
   * Arthur Golden - Memoirs of a Geisha
   * C.S. Lewis - Chronicles of Narnia
   * Carlos Ruiz Zafón - The Shadow of the Wind, The Angel's Game, The Prisoner of Heaven, Marina  
