@@ -9,7 +9,7 @@ export default function Home() {
         <div className="flex-shrink-0">
           <Image
             src="/stan.jpg"
-            alt="Stanley George"
+            alt="Stan George"
             width={200}
             height={200}
             className="rounded-full"
@@ -17,7 +17,7 @@ export default function Home() {
           />
         </div>
         <div className="flex-1 space-y-4">
-          <h1 className="text-4xl font-bold tracking-tight">Stanley George</h1>
+          <h1 className="text-4xl font-bold tracking-tight">Stan George</h1>
           <p className="text-xl text-gray-600 dark:text-gray-300">
             Director of Software Engineering
           </p>

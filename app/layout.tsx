@@ -3,9 +3,9 @@ import './globals.css'
 import { Navigation } from '@/components/Navigation'
 
 export const metadata: Metadata = {
-  title: 'Stanley George | Director of Software Engineering',
-  description: 'Portfolio of Stanley George - Director of Software Engineering, builder of macrosia.com, and software engineering thought leader.',
-  authors: [{ name: 'Stanley George' }],
+  title: 'Stan George | Director of Software Engineering',
+  description: 'Portfolio of Stan George - Director of Software Engineering, builder of macrosia.com, and software engineering thought leader.',
+  authors: [{ name: 'Stan George' }],
   keywords: ['software engineering', 'portfolio', 'macrosia', 'director of engineering'],
 }
 
