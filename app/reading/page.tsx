@@ -17,8 +17,8 @@ export default function Reading() {
     'The Old Man and the Sea - Ernest Hemingway',
     'Catch-22 - Joseph Heller',
     'Slaughterhouse-Five - Kurt Vonnegut',
-    "The Hitchhiker&apos;s Guide to the Galaxy - Douglas Adams",
-    'Ender&apos;s Game - Orson Scott Card',
+    "The Hitchhiker's Guide to the Galaxy - Douglas Adams",
+    "Ender's Game - Orson Scott Card",
     'The Martian - Andy Weir',
   ]
 
