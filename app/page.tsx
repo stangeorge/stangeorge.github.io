@@ -106,6 +106,17 @@ export default function Home() {
               Practical strategies for building your engineering team
             </p>
           </Link>
+          <Link
+            href="/articles/building-a-repo-aware-coding-agent"
+            className="block group"
+          >
+            <h3 className="text-lg font-medium text-blue-600 dark:text-blue-400 group-hover:underline">
+              Building a Repo-Aware Coding Agent
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">
+              My experience building a &quot;Mini Claude Code&quot; from scratch
+            </p>
+          </Link>
         </div>
       </section>
 
