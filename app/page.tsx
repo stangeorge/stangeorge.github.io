@@ -74,11 +74,33 @@ export default function Home() {
         </h2>
         <div className="space-y-4">
           <Link
+            href="/articles/building-a-repo-aware-coding-agent"
+            className="block group"
+          >
+            <h3 className="text-lg font-medium text-blue-600 dark:text-blue-400 group-hover:underline">
+              November 2025 - Building a Repo-Aware Coding Agent
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">
+              My experience building a &quot;Mini Claude Code&quot; from scratch
+            </p>
+          </Link>
+          <Link
+            href="/articles/tips-to-hire-a-software-engineer"
+            className="block group"
+          >
+            <h3 className="text-lg font-medium text-blue-600 dark:text-blue-400 group-hover:underline">
+              December 2019 - Tips to Hire a Software Engineer
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">
+              Practical strategies for building your engineering team
+            </p>
+          </Link>
+          <Link
             href="/articles/7-things-a-software-engineer-should-look-for-in-their-next-team"
             className="block group"
           >
             <h3 className="text-lg font-medium text-blue-600 dark:text-blue-400 group-hover:underline">
-              7 Things a Software Engineer Should Look for in Their Next Team
+              November 2019 - 7 Things a Software Engineer Should Look for in Their Next Team
             </h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">
               What to prioritize when evaluating your next engineering role
@@ -89,32 +111,10 @@ export default function Home() {
             className="block group"
           >
             <h3 className="text-lg font-medium text-blue-600 dark:text-blue-400 group-hover:underline">
-              How I Interview a Software Engineer
+              October 2019 - How I Interview a Software Engineer
             </h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">
               My approach to evaluating engineering candidates
-            </p>
-          </Link>
-          <Link
-            href="/articles/tips-to-hire-a-software-engineer"
-            className="block group"
-          >
-            <h3 className="text-lg font-medium text-blue-600 dark:text-blue-400 group-hover:underline">
-              Tips to Hire a Software Engineer
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">
-              Practical strategies for building your engineering team
-            </p>
-          </Link>
-          <Link
-            href="/articles/building-a-repo-aware-coding-agent"
-            className="block group"
-          >
-            <h3 className="text-lg font-medium text-blue-600 dark:text-blue-400 group-hover:underline">
-              Building a Repo-Aware Coding Agent
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">
-              My experience building a &quot;Mini Claude Code&quot; from scratch
             </p>
           </Link>
         </div>
