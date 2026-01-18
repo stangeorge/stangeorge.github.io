@@ -105,7 +105,7 @@ export default function HorrorMovies() {
                                                                               {movie.title}
                                                                             </a>a>
                                                                             <span className="text-gray-400 text-sm sm:text-base">
-                                                                                                  ({movie.year}) - {movie.rating} ⭐ | {movie.country}
+                                                                                                  ({movie.year}) - {movie.rating} stars | {movie.country}
                                                                             </span>span>
                                                         </div>div>
                                       </li>li>
