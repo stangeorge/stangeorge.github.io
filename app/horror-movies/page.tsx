@@ -68,7 +68,7 @@ export default function HorrorMovies() {
                 {/* Header */}
                       <header className="mb-12 text-center">
                                 <h1 className="text-5xl md:text-6xl font-bold mb-4 text-red-500 drop-shadow-lg">
-                                            🎬 Kanopy Horror Movies
+                                            Kanopy Horror Movies
                                 </h1>h1>
                                 <p className="text-xl md:text-2xl text-gray-300 mb-2">
                                             Curated list of horror films with 6.0+ IMDb ratings
@@ -82,7 +82,6 @@ export default function HorrorMovies() {
                 {Object.entries(movies).map(([decade, films]) => (
                     <section key={decade} className="mb-12">
                                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-red-400 border-b-2 border-red-500 pb-3 flex items-center gap-3">
-                                              <span>{decadeLabels[decade].emoji}</span>span>
                                               <span>{decadeLabels[decade].title}</span>span>
                                               <span className="text-lg text-gray-500 ml-auto">
                                                               ({films.length} films)
