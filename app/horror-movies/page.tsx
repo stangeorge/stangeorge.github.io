@@ -69,24 +69,24 @@ export default function HorrorMovies() {
                       <header className="mb-12 text-center">
                                 <h1 className="text-5xl md:text-6xl font-bold mb-4 text-red-500 drop-shadow-lg">
                                             Kanopy Horror Movies
-                                </h1>h1>
+                                </h1>
                                 <p className="text-xl md:text-2xl text-gray-300 mb-2">
                                             Curated list of horror films with 6.0+ IMDb ratings
-                                </p>p>
+                                </p>
                                 <p className="text-sm text-gray-400">
                                             Available on Kanopy | Organized by Decade | 39 Films Total
-                                </p>p>
-                      </header>header>
+                                </p>
+                      </header>
               
                 {/* Movie Sections by Decade */}
                 {Object.entries(movies).map(([decade, films]) => (
                     <section key={decade} className="mb-12">
                                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-red-400 border-b-2 border-red-500 pb-3 flex items-center gap-3">
-                                              <span>{decadeLabels[decade].title}</span>span>
+                                              <span>{decadeLabels[decade].title}</span>
                                               <span className="text-lg text-gray-500 ml-auto">
                                                               ({films.length} films)
-                                              </span>span>
-                                </h2>h2>
+                                              </span>
+                                </h2>
                                 
                                 <ul className="space-y-3">
                                   {films.map((movie, index) => (
@@ -102,34 +102,34 @@ export default function HorrorMovies() {
                                                                                                     className="text-blue-400 hover:text-blue-300 font-semibold text-lg hover:underline flex-shrink-0"
                                                                                                   >
                                                                               {movie.title}
-                                                                            </a>a>
+                                                                            </a>
                                                                             <span className="text-gray-400 text-sm sm:text-base">
                                                                                                   ({movie.year}) - {movie.rating} stars | {movie.country}
-                                                                            </span>span>
-                                                        </div>div>
-                                      </li>li>
+                                                                            </span>
+                                                        </div>
+                                      </li>
                                     ))}
-                                </ul>ul>
-                    </section>section>
+                                </ul>
+                    </section>
                   ))}
               
                 {/* Footer */}
                       <footer className="mt-16 text-center text-gray-400 text-sm border-t border-gray-800 pt-8">
                                 <p className="mb-2">
-                                            <strong>Total: 39 verified horror films with 6.0+ IMDb ratings</strong>strong>
-                                </p>p>
-                                <p className="mb-2">All ratings verified from IMDb</p>p>
-                                <p className="mb-4">Films link directly to Kanopy for streaming</p>p>
+                                            <strong>Total: 39 verified horror films with 6.0+ IMDb ratings</strong>
+                                </p>
+                                <p className="mb-2">All ratings verified from IMDb</p>
+                                <p className="mb-4">Films link directly to Kanopy for streaming</p>
                                 <p className="text-xs text-gray-500">
                                             Last updated: {new Date().toLocaleDateString('en-US', { 
                         year: 'numeric', 
                         month: 'long', 
                         day: 'numeric' 
         })}
-                                </p>p>
-                      </footer>footer>
-              </div>div>
-        </div>div>
+                                </p>
+                      </footer>
+              </div>
+        </div>
       );
 }
 
@@ -140,4 +140,4 @@ export const metadata = {
           title: 'Horror Movies on Kanopy - Curated List',
           description: '39 verified horror films with 6.0+ IMDb ratings',
     },
-};</div>
+};
