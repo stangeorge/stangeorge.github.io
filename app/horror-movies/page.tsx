@@ -64,7 +64,7 @@ export default function HorrorMovies() {
       { title: "Possession", year: 1981, rating: 7.3, country: "France/West Germany", url: "https://www.kanopy.com/en/mppl/video/14014934", source: "kanopy" },
       { title: "Day of the Dead", year: 1985, rating: 7.2, country: "USA", url: "https://www.hoopladigital.com/movie/day-of-the-dead-lori-cardille/15377816", source: "hoopla" },
       { title: "Tetsuo: The Iron Man", year: 1989, rating: 7.0, country: "Japan", url: "https://www.kanopy.com/en/mppl/video/114581", source: "kanopy" },
-      { title: "Demons", year: 1985, rating: 6.7, country: "Italy", url: "https://www.hoopladigital.com/movie/demons-urbano-barberini/15377817", source: "hoopla" },
+      { title: "Demons", year: 1985, rating: 6.7, country: "Italy", url: "https://www.hoopladigital.com/movie/demons-urbano-barberini/11360812", source: "hoopla" },
       { title: "The Howling", year: 1981, rating: 6.6, country: "USA", url: "https://www.hoopladigital.com/movie/the-howling-dee-wallace/15377959", source: "hoopla" },
       { title: "Maniac", year: 1980, rating: 6.4, country: "USA", url: "https://www.hoopladigital.com/movie/maniac-joe-spinell/15377962", source: "hoopla" },
       { title: "Street Trash", year: 1987, rating: 6.1, country: "USA", url: "https://www.kanopy.com/en/mppl/video/15923639", source: "kanopy" },
