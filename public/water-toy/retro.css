@@ -1,0 +1,24 @@
+/* Unmarked cream plastic casing and two soft orange rubber pumps. */
+:root{background:#183935;color:#273f3c;font-family:system-ui,sans-serif;font-synthesis:none}
+*{box-sizing:border-box}
+body{margin:0;overflow:hidden;overscroll-behavior:none;background:#23443b}
+button{-webkit-tap-highlight-color:transparent;cursor:pointer}
+button:focus-visible{outline:3px solid #fff1b0;outline-offset:4px}
+.game{position:absolute;left:50%;top:50%;width:min(100svw,520px);height:100svh;margin:0;transform:translate(-50%,-50%);transform-origin:center;display:flex;flex-direction:column;padding:max(18px,env(safe-area-inset-top)) 18px max(18px,env(safe-area-inset-bottom));overflow:hidden;background:#e9dcb6;border-left:8px solid #c8b98d;border-right:8px solid #c8b98d;box-shadow:inset 0 0 0 3px #f9efcf,0 0 0 3px #142b28,0 24px 80px #0008}
+.tank{position:relative;flex:1;min-height:0;border:9px solid #485648;border-top-color:#344538;border-left-color:#344538;border-radius:15px;overflow:hidden;background:#12605d;box-shadow:0 3px 0 #fff3d0,0 0 0 2px #b9a67a,inset 0 0 0 2px #182f28}
+.tank canvas{width:100%;height:100%;display:block}
+.tank:after{content:'';position:absolute;inset:0;pointer-events:none;border-radius:5px;border:1px solid #f5ffef80;background:linear-gradient(105deg,transparent 4%,#ffffff24 5%,#ffffff0d 8%,transparent 16%,transparent 80%,#ffffff15 88%,transparent 96%);box-shadow:inset 0 0 18px #235b4940,inset 6px 0 8px #fffef660,inset -5px 0 8px #fffef630}
+.controls{display:grid;grid-template-columns:28% 44% 28%;flex-shrink:0;align-items:center;padding:24px 0 10px}
+.pump{justify-self:center}
+.pump:last-child{grid-column:3}
+.pump{touch-action:none;user-select:none;-webkit-user-select:none;width:88px;height:88px;border:7px solid #d2c399;border-radius:50%;background:radial-gradient(circle at 40% 30%,#fba652,#e5712c 75%);box-shadow:0 5px 0 #9d7049,0 0 0 2px #b7a57a,inset 0 2px 0 #ffd590,inset 0 -4px 0 #b85323;transition:transform .07s,box-shadow .07s}
+.pump.pressed{box-shadow:0 0 0 #9d7049,0 0 0 2px #b7a57a,inset 0 2px 6px #9b401e80;transform:translateY(5px)}
+/* Motion permission still requires a user gesture; this target adds no markings. */
+.overlay{position:absolute;inset:0;z-index:2;background:transparent;pointer-events:none}
+.overlay[hidden],.hidden-hooks{display:none!important}
+.start{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;border-radius:0;box-shadow:none;background:transparent;color:transparent;font-size:0;pointer-events:auto;touch-action:manipulation}
+.start[hidden]{display:none}
+@media(max-width:360px){.game{padding-left:12px;padding-right:12px;border-width:5px}.pump{width:76px;height:76px}}
+@media(max-height:680px) and (orientation:portrait){.controls{padding-top:16px;padding-bottom:6px}.pump{width:72px;height:72px}}
+/* Rotate the whole toy, rather than reflowing the tank into landscape. */
+@media(orientation:landscape){.game{width:min(100svh,520px);height:100svw;transform:translate(-50%,-50%) rotate(var(--game-rotation,90deg));padding-left:18px;padding-right:18px}}

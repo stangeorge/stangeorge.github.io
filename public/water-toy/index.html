@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#e9dcb6">
+<title> </title>
+<link rel="stylesheet" href="./retro.css">
+</head>
+<body>
+<main class="game" aria-label="Water ring toss toy">
+<section class="tank" id="tank" aria-label="Water tank with eight rings and two poles">
+<div class="overlay" id="overlay" hidden><button class="start" id="start" aria-label="Enable motion and play"></button></div>
+</section>
+<div class="controls">
+<button class="pump" id="left" aria-label="Pump left water jet"></button>
+<button class="pump" id="right" aria-label="Pump right water jet"></button>
+</div>
+<div class="hidden-hooks" hidden>
+<button id="reset" aria-label="Restart game"></button>
+<span id="count"></span><span id="motion-status"></span><span id="hint"></span>
+<span id="welcome-title"></span><span id="welcome-copy"></span><span id="note"></span>
+<span id="phone-url"></span><span id="tilt-dot"></span>
+</div>
+</main>
+<script type="module">
+// Request fresh game code on every reload, including older cached deployments.
+import(`./game.js?refresh=${Date.now()}`).catch(() => {
+  document.getElementById('start').hidden = true;
+});
+</script>
+</body>
+</html>
