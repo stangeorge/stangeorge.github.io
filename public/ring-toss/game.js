@@ -181,10 +181,9 @@ function reset(){state.count=0;state.won=false;state.time=0;state.pulse=[0,0];$(
 function pump(side){if(!state.playing)return;updateAirPocket();const immersion=jetImmersion(side);state.pulse[side]=Math.min(2.8,state.pulse[side]+1.25*immersion);if(immersion>.05)emit(JET_POSITIONS[side],Math.ceil(14*immersion));}
 // Track contacts only for button visuals; a held contact never pumps again.
 const held=new Map();
-let motionRequested=false;
+
 function pressPump(side){
-  // Play immediately. Request sensor access once, from a real squeeze gesture.
-  if(!motionRequested){motionRequested=true;void start();}
+  // The squeeze pumps immediately; permission is requested by the click event.
   pump(side);
 }
 function clearPumps(){held.clear();$('left').classList.remove('pressed');$('right').classList.remove('pressed');}
@@ -194,7 +193,12 @@ for(const [id,side] of [['left',0],['right',1]]){
   const release=e=>{held.delete(e.pointerId);if(![...held.values()].some(h=>h.side===side))el.classList.remove('pressed');};
   el.addEventListener('pointerup',release);el.addEventListener('pointercancel',release);el.addEventListener('lostpointercapture',release);
   // Native button activation remains available to assistive technology.
-  el.addEventListener('click',e=>{if(e.detail===0)void pressPump(side);});
+  el.addEventListener('click',e=>{
+    // Safari recognizes button activation as a permission gesture. Retry if
+    // no sensor signal arrived, rather than permanently locking out motion.
+    if(!state.sensor)void start();
+    if(e.detail===0)pressPump(side);
+  });
 }
 window.addEventListener('blur',clearPumps);
 function screenAngle(){return screen.orientation?.angle??window.orientation??0;}
@@ -227,7 +231,20 @@ function orientation(e){
   state.sensor=true;
   if(state.playing)$('motion-status').textContent='Tilt connected';
 }
-function motion(e){if(!state.playing)return;const a=e.acceleration;if(!a||a.x===null||a.y===null||a.z===null)return;const magnitude=Math.hypot(a.x,a.y,a.z);if(magnitude>6&&state.time-state.lastShake>.55){state.lastShake=state.time;for(const r of rings){if(r.pole===null){r.vx+=(Math.random()-.5)*Math.min(magnitude*.13,2.0);r.vy+=Math.min(magnitude*.09,1.4);r.spin+=(Math.random()-.5)*2;}}emit(0,8);}}
+function motion(e){if(!state.playing)return;
+  // Some mobile browsers expose gravity through motion but not orientation.
+  const g=e.accelerationIncludingGravity;
+  if(!state.latest&&g&&[g.x,g.y,g.z].every(Number.isFinite)){
+    const length=Math.hypot(g.x,g.y,g.z);
+    if(length>1){
+      const angle=(screenAngle()-presentationRotation)*Math.PI/180;
+      const x=g.x/length,y=g.y/length;
+      state.targetX=x*Math.cos(angle)+y*Math.sin(angle);
+      state.targetY=-x*Math.sin(angle)+y*Math.cos(angle);
+      state.targetZ=g.z/length;state.sensor=true;
+    }
+  }
+  const a=e.acceleration;if(!a||a.x===null||a.y===null||a.z===null)return;const magnitude=Math.hypot(a.x,a.y,a.z);if(magnitude>6&&state.time-state.lastShake>.55){state.lastShake=state.time;for(const r of rings){if(r.pole===null){r.vx+=(Math.random()-.5)*Math.min(magnitude*.13,2.0);r.vy+=Math.min(magnitude*.09,1.4);r.spin+=(Math.random()-.5)*2;}}emit(0,8);}}
 window.addEventListener('deviceorientation',orientation);
 window.addEventListener('devicemotion',motion);
 function screenChanged(){keepPortrait();if(state.latest)orientation(state.latest);}
@@ -247,7 +264,7 @@ async function enableMotion(){
     const requests=[];
     for(const api of [window.DeviceOrientationEvent,window.DeviceMotionEvent])if(typeof api?.requestPermission==='function')requests.push(api.requestPermission());
     const results=await Promise.all(requests);
-    if(results.includes('denied')){$('welcome-copy').textContent='Motion access was declined. Allow motion in your browser settings, then try again.';$('start').textContent='Try motion again';return;}
+    if(results.length&&results.every(result=>result==='denied')){$('welcome-copy').textContent='Motion access was declined. Allow motion in your browser settings, then try again.';$('start').textContent='Try motion again';return;}
     if(!window.DeviceOrientationEvent){$('welcome-copy').textContent='This browser does not provide tilt controls. Open this page in Safari or Chrome on your phone.';return;}
     if(state.latest)orientation(state.latest);
     state.playing=true;overlay.hidden=true;
